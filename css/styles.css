@@ -420,6 +420,16 @@ body {
 }
 /* end team */
 
+/* Постоянные клиенты */
+.clients-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--title-text-color);
+  margin-bottom: 50px;
+}
+/* end Постоянные клиенты */
+
 /* footer */
 .footer {
   background-color: var(--primary-color-hf);
