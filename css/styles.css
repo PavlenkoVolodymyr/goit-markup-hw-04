@@ -26,6 +26,8 @@
   --portfolio-bg: #eeeeee;
   --color-bg: #e5e5e5;
   --jpg-margin: 30px;
+  --icon: #afb1b8;
+  --icon-social-bg: rgba(255, 255, 255, 0.1);
 }
 
 .container {
@@ -140,7 +142,7 @@ body {
 
 .header-contact .header-contact-mailto,
 .header-contact-tel {
-  display: block;
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -166,6 +168,11 @@ body {
   color: var(--accent-color);
 }
 
+.icon-adress:hover,
+.icon-adress:focus {
+  fill: var(--accent-color);
+}
+
 .header-nav-menu-link {
   font-weight: 500;
   font-size: 14px;
@@ -180,6 +187,18 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+}
+
+.header-contact .icon-adress {
+  display: inline-flex;
+  color: var(--primary-text-color);
+}
+
+.icon-adress {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
 }
 /* end header */
 
@@ -198,6 +217,9 @@ body {
     url('../images/background/header-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  color: var(--primary-white-color);
+  text-align: center;
 }
 
 .title {
@@ -267,33 +289,6 @@ body {
 /* end title */
 
 /* features */
-.features-item::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--secondary-bg-color);
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-
-.icon-antenna::before {
-  background-image: url('../images/features-icons/antena.svg');
-}
-
-.icon-clock::before {
-  background-image: url('../images/features-icons/clock.svg');
-}
-
-.icon-diagrama::before {
-  background-image: url('../images/features-icons/diagrama.svg');
-}
-
-.icon-astronaut::before {
-  background-image: url('../images/features-icons/astronaut.svg');
-}
 
 .section-features {
   padding-bottom: 0;
@@ -339,6 +334,21 @@ body {
   line-height: 1.71;
   color: var(--title-text-color);
 }
+
+.features-icon {
+  display: flex;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--secondary-bg-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.features-icon-item {
+  width: 70px;
+  height: 70px;
+}
 /* end features */
 
 /* direction */
@@ -366,6 +376,39 @@ body {
 /* end direction */
 
 /* team */
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon);
+}
+
+.social-link:hover,
+.social-link:focus {
+  color: (var(--primary-white-color));
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-social {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
 .foto {
   padding: 30px 24px;
 }
@@ -386,6 +429,7 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
 .team-item + .team-item {
   margin-left: 30px;
 }
@@ -428,6 +472,39 @@ body {
   color: var(--title-text-color);
   margin-bottom: 50px;
 }
+
+.clients-list {
+  display: flex;
+  padding: 0;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: inline-flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon);
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  color: var(--icon);
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
 /* end Постоянные клиенты */
 
 /* footer */
@@ -440,6 +517,7 @@ body {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer .a {
@@ -499,6 +577,29 @@ body {
 .footer-address-mailto {
   margin-top: 0;
   margin-bottom: 9px;
+}
+
+.footer-block {
+  margin-left: 70px;
+}
+
+.footer-text {
+  font-weight: 700;
+  line-height: 1.14;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.footer .social-link {
+  color: var(--primary-white-color);
+  background-color: var(--icon-social-bg);
+  border-radius: 50%;
+}
+
+.footer .social-link:hover,
+.footer .social-link:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
 }
 /* end footer */
 
