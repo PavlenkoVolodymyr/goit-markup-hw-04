@@ -409,6 +409,12 @@ body {
   fill: currentColor;
 }
 
+.section-team .social-link:hover,
+.section-team .social-link:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
 .foto {
   padding: 30px 24px;
 }
