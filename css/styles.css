@@ -161,6 +161,7 @@ body {
 .header-contact-mailto:hover,
 .header-contact-mailto:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .header-contact-tel:hover,
@@ -171,6 +172,13 @@ body {
 .icon-adress:hover,
 .icon-adress:focus {
   fill: var(--accent-color);
+}
+
+.icon-adress {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .header-nav-menu-link {
@@ -191,15 +199,8 @@ body {
 
 .header-contact .icon-adress {
   display: inline-flex;
-  color: var(--primary-text-color);
 }
 
-.icon-adress {
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  fill: currentColor;
-}
 /* end header */
 
 /* title webstudio*/
